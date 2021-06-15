@@ -1,0 +1,67 @@
+<h5><span class="badge badge-light ">{{question._id}}</span> -> {{question.Question}}</h5>
+<div [hidden]="submitted">
+    <form #detailQuestionForm="ngForm">
+      <div class="form-group">
+        <label for="Question">Pregunta</label>
+        <input type="text" class="form-control" id="Question" required
+        [(ngModel)]="question.Question" name="Question" #Question="ngModel">
+        <div [hidden]="Question.valid || Question.pristine"
+             class="alert alert-danger">
+            Pregunta requerida
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="Answer1">Respuesta Correcta</label>
+        <input type="text" class="form-control" id="Answer1" required
+        [(ngModel)]="question.Answer1" name="Answer1" #Answer1="ngModel">
+        <div [hidden]="Answer1.valid || Answer1.pristine"
+             class="alert alert-danger">
+            Respuesta Correcta requerida
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="Answer2">Respuesta 2</label>
+        <input type="text" class="form-control" id="Answer2" required
+        [(ngModel)]="question.Answer2" name="Answer2" #Answer2="ngModel">
+        <div [hidden]="Answer2.valid || Answer2.pristine"
+             class="alert alert-danger">
+            Respuesta 2 requerida
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Answer3">Respuesta 3</label>
+        <input type="text" class="form-control" id="Answer3" required
+        [(ngModel)]="question.Answer3" name="Answer3" #Answer3="ngModel">
+        <div [hidden]="Answer3.valid || Answer3.pristine"
+             class="alert alert-danger">
+            Respuesta 3 requerida
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Answer4">Respuesta 4</label>
+        <input type="text" class="form-control" id="Answer4" required
+        [(ngModel)]="question.Answer4" name="Answer4" #Answer4="ngModel">
+        <div [hidden]="Answer4.valid || Answer4.pristine"
+             class="alert alert-danger">
+            Respuesta 4 requerida
+        </div>
+      </div>
+
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-dark" (click)="goBack()">Volver</button>
+        <button type="button" class="btn btn-dark" (click)="update()" [disabled]="!detailQuestionForm.form.valid">Actualizar</button>
+        <button type="button" class="btn btn-dark" (click)="delete()">Borrar</button>
+	    </div>
+    </form>
+</div>
+ 
+<div [hidden]="!submitted">
+    <p>{{message}}</p>
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Volver</button>
+    </div>
+</div>

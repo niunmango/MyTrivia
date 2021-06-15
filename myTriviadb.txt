@@ -1,0 +1,24 @@
+db
+
+myTrivia
+
+collections
+
+questions
+
+Question: String 250
+Answer1: String 50
+Answer2: String 50
+Answer3: String 50
+Answer4: String 50
+
+
+
+users
+
+id: 
+Name: String 50
+Email: String 50
+Score:
+Time:
+

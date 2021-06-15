@@ -1,0 +1,24 @@
+<h1 class="justify-center">Jugar</h1>
+  <div class="container">
+    <div id="game" class="justify-center flex-column">
+      <h2 id="quesiton">{{question.Question}}</h2>
+      <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text">{{question.Answer1}}</p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">B</p>
+        <p class="choice-text">{{question.Answer2}}</p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">C</p>
+        <p class="choice-text">{{question.Answer3}}</p>
+      </div>
+      <div class="choice-container">
+        <p class="choice-prefix">D</p>
+        <p class="choice-text">{{question.Answer4}}</p>
+
+  <!--
+  <a [routerLink]="['/questions', question._id]" style="color:black"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{question.Question}}</a>
+  -->
+</div>

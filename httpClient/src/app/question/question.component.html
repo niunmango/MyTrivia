@@ -1,0 +1,4 @@
+<h5>Preguntas</h5>
+<div *ngFor="let question of questions; let rowIndex=index">
+  <a [routerLink]="['/questions', question._id]" style="color:black"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{question.Question}}</a>
+</div>
